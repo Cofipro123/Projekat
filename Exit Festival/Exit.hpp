@@ -1,0 +1,6 @@
+#ifndef EXIT_HPP_INCLUDED
+#define EXIT_HPP_INCLUDED
+
+
+
+#endif // EXIT_HPP_INCLUDED
