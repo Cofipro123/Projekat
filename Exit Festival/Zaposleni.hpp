@@ -1,7 +1,7 @@
 #ifndef ZAPOSLENI_HPP_INCLUDED
 #define ZAPOSLENI_HPP_INCLUDED
 enum tipPosla{PANDUR, OBEZBEDJENJE, MEDTEHNICAR, VOLONTER, STANDZAHRANU};
-class Zaposleni{
+class Zaposleni:public Osoba{
 private:
     tipPosla t;
     double plata;

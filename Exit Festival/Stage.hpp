@@ -2,6 +2,8 @@
 #define STAGE_HPP_INCLUDED
 class Stage{
 private:
+    string ime;
+    bool profesorkinOmiljeniStejdz;
 };
 
 

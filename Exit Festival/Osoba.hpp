@@ -5,6 +5,7 @@ private:
     string ime;
     string prezime;
     int uzrast;
+    int brojHromozoma;
 };
 
 

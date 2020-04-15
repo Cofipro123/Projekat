@@ -1,8 +1,8 @@
 #ifndef IZVODJAC_HPP_INCLUDED
 #define IZVODJAC_HPP_INCLUDED
-class Izvodjac{
+class Izvodjac:public Osoba{
 private:
-    string zanr;
+    Zanr z;
 };
 
 
