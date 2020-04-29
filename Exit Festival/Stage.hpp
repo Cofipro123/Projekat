@@ -1,9 +1,15 @@
 #ifndef STAGE_HPP_INCLUDED
 #define STAGE_HPP_INCLUDED
 class Stage{
-private:
+protected:
     string ime;
     bool profesorkinOmiljeniStejdz;
+public:
+    Stage(string i, bool p)
+    {
+        ime=i;
+        profesorkinOmiljeniStejdz=p;
+    }
 };
 
 

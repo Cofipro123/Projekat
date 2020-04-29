@@ -1,11 +1,19 @@
 #ifndef OSOBA_HPP_INCLUDED
 #define OSOBA_HPP_INCLUDED
 class Osoba{
-private:
+protected:
     string ime;
     string prezime;
     int uzrast;
     int brojHromozoma;
+public:
+    Osoba(string i, string p, int u, int brh)
+    {
+        ime=i;
+        prezime=p;
+        uzras=u;
+        brojHromozoma=b;
+    }
 };
 
 
