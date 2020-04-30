@@ -3,14 +3,14 @@
 class Zanr{
 protected:
     string zanr;
-    Stage s;
+    string opis;
 public:
-    Zanr(string z, string i, bool p):Stage(i,p)
+    Zanr(string z, string o)
     {
         zanr=z;
-        ime=i;
-        profesorkinOmiljeniStejdz=p;
+        opis=o;
     }
+    string getZanr(){return zanr;}
 };
 
 

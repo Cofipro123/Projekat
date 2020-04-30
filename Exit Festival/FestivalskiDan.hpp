@@ -1,16 +1,14 @@
 #ifndef FESTIVALSKIDAN_HPP_INCLUDED
 #define FESTIVALSKIDAN_HPP_INCLUDED
+#include "Nastup.hpp"
 class FestivalskiDan{
 protected:
     int dan;
     Nastup n[10];
 public:
-    FestivalskiDan(int d, string u, string i, bool p):Nastup(u,i,p)
+    FestivalskiDan(int d, string u, string i, bool p):n(u,i,p)
     {
         dan=d;
-        imeIzv=u;
-        ime=i;
-        profesorkinOmiljeniStejdz=p;
     }
 };
 

@@ -11,8 +11,8 @@ public:
     {
         ime=i;
         prezime=p;
-        uzras=u;
-        brojHromozoma=b;
+        uzrast=u;
+        brojHromozoma=brh;
     }
 };
 

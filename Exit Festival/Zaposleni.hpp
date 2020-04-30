@@ -1,5 +1,6 @@
 #ifndef ZAPOSLENI_HPP_INCLUDED
 #define ZAPOSLENI_HPP_INCLUDED
+#include "Osoba.hpp"
 enum tipPosla{PANDUR, OBEZBEDJENJE, MEDTEHNICAR, VOLONTER, STANDZAHRANU};
 class Zaposleni:public Osoba{
 protected:
@@ -7,15 +8,11 @@ protected:
     double plata;
     int radniDani;
 public:
-    Zaposleni(tipPosla tt, double p, int r, string i, string p, int u, int brh):Osoba(i,p,u,brh)
+    Zaposleni(tipPosla tt, double pl, int r, string i, string p, int u, int brh):Osoba(i,p,u,brh)
     {
         t=tt;
-        plata=p;
+        plata=pl;
         radniDani=r;
-        ime=i;
-        prezime=p;
-        uzrast=u;
-        brojHromozoma=b;
     }
 };
 
