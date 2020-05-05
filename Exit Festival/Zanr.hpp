@@ -5,6 +5,11 @@ protected:
     string zanr;
     string opis;
 public:
+    Zanr()
+    {
+        zanr="";
+        opis="";
+    }
     Zanr(string z, string o)
     {
         zanr=z;

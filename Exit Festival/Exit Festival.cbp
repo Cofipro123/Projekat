@@ -38,6 +38,7 @@
 		<Unit filename="FestivalskiDan.hpp">
 			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
+		<Unit filename="Funkcionalnost.txt" />
 		<Unit filename="Izvodjac.hpp">
 			<Option target="&lt;{~None~}&gt;" />
 		</Unit>

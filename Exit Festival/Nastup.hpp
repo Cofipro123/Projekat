@@ -6,7 +6,7 @@ protected:
     string imeIzv;
     Stage s;
 public:
-    Nastup(string u, string i, bool p):s(i,p)
+    Nastup(string u, string i, bool p, string z, string o):s(i,p,z,o)
     {
         imeIzv=u;
     }

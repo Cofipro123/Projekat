@@ -7,6 +7,7 @@ protected:
     bool profesorkinOmiljeniStejdz;
     Zanr z;
 public:
+    //Napraviti construktor bez parametri
     Stage(string i, bool p, string z, string o):z(z,o)
     {
         ime=i;

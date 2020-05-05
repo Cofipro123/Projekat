@@ -8,6 +8,13 @@ protected:
     double plata;
     Zanr z;
 public:
+    Izvodjac():z(),Osoba()
+     {
+         domaci=false;
+         plata=0;
+
+     }
+    //Napraviti construktor bez parametri
     Izvodjac(bool d, double pl, string z, string o, string i, string p, int u, int brh):z(z,o) ,Osoba(i,p,u,brh)
     {
         domaci=d;

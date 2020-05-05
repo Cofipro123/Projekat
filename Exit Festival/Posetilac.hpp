@@ -14,7 +14,7 @@ public:
         u=uu;
         pare=p;
     }
-    bool kupi
+    bool kupi ()
     {
         int x;
         cout<<"Pozdrav, posetioce. Molim Vas da izaberete sta zelite da kupite."<<endl;
@@ -65,9 +65,9 @@ public:
                 return false;
             }
         }
-    }
+    };
     string getFavZanr(){return favZanr;}
-    void unos (Izvodjac iz[], Stage s[])
+   /* void unos (Izvodjac iz[], Stage s[])
     {
         string ime;
         string prezime;
@@ -100,7 +100,7 @@ public:
             }
         }
 
-    }
+    }*/
 
 };
 

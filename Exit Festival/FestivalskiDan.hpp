@@ -4,9 +4,9 @@
 class FestivalskiDan{
 protected:
     int dan;
-    Nastup n[10];
+    Nastup n;
 public:
-    FestivalskiDan(int d, string u, string i, bool p):n(u,i,p)
+    FestivalskiDan(int d, string u, string i, bool p, string z, string o):n(u,i,p,z,o)
     {
         dan=d;
     }

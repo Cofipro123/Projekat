@@ -7,6 +7,13 @@ protected:
     int uzrast;
     int brojHromozoma;
 public:
+    Osoba()
+    {
+        ime="X";
+        prezime="Y";
+        uzrast=0;
+        brojHromozoma=46;
+    }
     Osoba(string i, string p, int u, int brh)
     {
         ime=i;
