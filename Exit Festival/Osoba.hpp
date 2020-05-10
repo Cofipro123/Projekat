@@ -21,6 +21,20 @@ public:
         uzrast=u;
         brojHromozoma=brh;
     }
+    friend ostream& operator<<(ostream& izlaz, const Osoba& o){
+
+        izlaz<<"Osoba - ispis"<<endl;
+
+        izlaz<<"Ime: "<<o.ime<<endl;
+
+        izlaz<<"Prezime:"<<o.prezime<<endl;
+
+        izlaz<<"Uzrast: "<<o.uzrast<<endl;
+
+        izlaz<<"Broj hromozoma: "<<o.brojHromozoma<<endl;
+
+        return izlaz;
+    }
 };
 
 

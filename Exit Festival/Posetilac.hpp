@@ -7,12 +7,14 @@ protected:
     string favZanr;
     vrstaUlaznice u;
     int pare;
+    static int brPosetilaca;
 public:
     Posetilac(string f, vrstaUlaznice uu, int p, string i, string prz, int g, int brh):Osoba(i,prz,g,brh)
     {
         favZanr=f;
         u=uu;
         pare=p;
+        brPosetilaca++;
     }
     bool kupi ()
     {

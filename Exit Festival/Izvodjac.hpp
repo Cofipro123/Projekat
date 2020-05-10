@@ -20,6 +20,25 @@ public:
         domaci=d;
         plata=pl;
     }
+    friend ostream& operator<<(ostream& izlaz, const Izvodjac &i){
+
+        izlaz<<"Izvodjac - ispis"<<endl;
+
+        izlaz<<"Ime: "<<i.ime<<endl;
+
+        izlaz<<"Prezime:"<<i.prezime<<endl;
+
+        izlaz<<"Uzrast: "<<i.uzrast<<endl;
+
+        izlaz<<"Broj hromozoma: "<<i.brojHromozoma<<endl;
+
+        izlaz<<"Domaci: "<<i.domaci<<endl;
+
+        izlaz<<"Plata: "<<i.plata<<endl;
+
+        izlaz<<"Zanr: "<<i.z<<endl;
+        return izlaz;
+    }
 };
 
 
