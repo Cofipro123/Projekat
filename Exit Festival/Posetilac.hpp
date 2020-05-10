@@ -15,6 +15,7 @@ public:
         u=uu;
         pare=p;
         brPosetilaca++;
+        cout<<"Ima "<<brPosetilaca<<" posetilaca"<<endl;
     }
     bool kupi ()
     {
