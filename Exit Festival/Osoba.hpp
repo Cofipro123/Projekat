@@ -35,6 +35,11 @@ public:
 
         return izlaz;
     }
+    virtual void plan ()
+    {
+        cout<< "Dobar dan "<< ime<< ", Vas plan je:";
+    }
+    string getIme(){return ime;}
 };
 
 

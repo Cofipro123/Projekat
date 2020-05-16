@@ -51,5 +51,13 @@ int main()
     cout<<"\tU fajlu posle dodavanja pise: "<<endl;
     Osoba o("X","Y",20,46);
     cout<<o<<endl;
+    Osoba o1("Petar", "Lucic", 14, 42);
+    Zaposleni z(PANDUR,0,4,"Mihajlo", "Malinovic", 16, 49);
+    Zaposleni z1(OBEZBEDJENJE,5000,2,"Ognjen", "Bozic", 16, 360);
+    z.dodajVector(o);
+    z.dodajVector(o1);
+    z.brisVector();
+    z.ispis();
+    z.pretraga();
     return 0;
 }

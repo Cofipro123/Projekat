@@ -5,15 +5,29 @@ class Stage{
 protected:
     string ime;
     bool profesorkinOmiljeniStejdz;
-    Zanr z;
 public:
     //Napraviti construktor bez parametri
-    Stage(string i, bool p, string z, string o):z(z,o)
+    Stage(string i, bool p)
     {
         ime=i;
         profesorkinOmiljeniStejdz=p;
     }
-    string getZanr(){return z.getZanr();}
+    Stage()
+    {
+        ime="Main";
+        profesorkinOmiljeniStejdz=true;
+    }
+    friend ostream& operator<<(ostream& izlaz, const Stage &s){
+
+        izlaz<<"Stage - ispis"<<endl;
+
+        izlaz<<"Naziv Stagea: "<<s.ime<<endl;
+
+        izlaz<<"Profesorkin omiljeni stejdz:"<<s.profesorkinOmiljeniStejdz<<endl;
+
+        return izlaz;
+    }
+    string getIme(){return ime;}
 };
 
 

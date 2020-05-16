@@ -6,7 +6,7 @@ protected:
     int dan;
     Nastup n;
 public:
-    FestivalskiDan(int d, string u, string i, bool p, string z, string o):n(u,i,p,z,o)
+    FestivalskiDan(int d, string u, int s, int m):n(u,s,m)
     {
         dan=d;
     }

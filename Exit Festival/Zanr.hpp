@@ -1,16 +1,18 @@
 #ifndef ZANR_HPP_INCLUDED
 #define ZANR_HPP_INCLUDED
+#include "Stage.hpp"
 class Zanr{
 protected:
     string zanr;
     string opis;
+    Stage s;
 public:
-    Zanr()
+    Zanr():s()
     {
         zanr="";
         opis="";
     }
-    Zanr(string z, string o)
+    Zanr(string z, string o, string i, bool p):s(i,p)
     {
         zanr=z;
         opis=o;
@@ -26,6 +28,7 @@ public:
 
         return izlaz;
     }
+    Stage getStejdz(){return s;}
 };
 
 

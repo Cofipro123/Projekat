@@ -1,15 +1,21 @@
 #ifndef NASTUP_HPP_INCLUDED
 #define NASTUP_HPP_INCLUDED
 #include "Stage.hpp"
+#include "TerminNastupa.hpp"
 class Nastup{
 protected:
     string imeIzv;
-    Stage s;
+    TerminNastupa t;
 public:
-    Nastup(string u, string i, bool p, string z, string o):s(i,p,z,o)
+    Nastup():t()
+    {
+        imeIzv="d";
+    }
+    Nastup(string u, int s, int m):t(s,m)
     {
         imeIzv=u;
     }
+    TerminNastupa getTermin(){return t;}
 };
 
 

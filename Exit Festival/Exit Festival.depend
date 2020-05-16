@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1588691981 source:d:\filip\Škola\git projekat\projekat\exit festival\main.cpp
+1589662827 source:d:\filip\Škola\git projekat\projekat\exit festival\main.cpp
 	<iostream>
 	"Osoba.hpp"
 	"Posetilac.hpp"
@@ -13,30 +13,35 @@
 	"Nastup.hpp"
 	<fstream>
 
-1589130991 d:\filip\Škola\git projekat\projekat\exit festival\osoba.hpp
+1589660905 d:\filip\Škola\git projekat\projekat\exit festival\osoba.hpp
 
-1588579751 d:\filip\Škola\git projekat\projekat\exit festival\posetilac.hpp
-	"Osoba.hpp"
-
-1588245421 d:\filip\Škola\git projekat\projekat\exit festival\zaposleni.hpp
-	"Osoba.hpp"
-
-1589131690 d:\filip\Škola\git projekat\projekat\exit festival\izvodjac.hpp
+1589660496 d:\filip\Škola\git projekat\projekat\exit festival\posetilac.hpp
 	"Osoba.hpp"
 	"Zanr.hpp"
 
-1589131236 d:\filip\Škola\git projekat\projekat\exit festival\zanr.hpp
+1589663135 d:\filip\Škola\git projekat\projekat\exit festival\zaposleni.hpp
+	"Osoba.hpp"
+	<vector>
 
-1588691069 d:\filip\Škola\git projekat\projekat\exit festival\stage.hpp
+1589661295 d:\filip\Škola\git projekat\projekat\exit festival\izvodjac.hpp
+	"Osoba.hpp"
+	"Zanr.hpp"
+	"Nastup.hpp"
+
+1589659584 d:\filip\Škola\git projekat\projekat\exit festival\zanr.hpp
+	"Stage.hpp"
+
+1589625903 d:\filip\Škola\git projekat\projekat\exit festival\stage.hpp
 	"Zanr.hpp"
 
 1588086007 d:\filip\Škola\git projekat\projekat\exit festival\exit.hpp
 
-1588690699 d:\filip\Škola\git projekat\projekat\exit festival\festivalskidan.hpp
+1589661503 d:\filip\Škola\git projekat\projekat\exit festival\festivalskidan.hpp
 	"Nastup.hpp"
 
-1588690629 d:\filip\Škola\git projekat\projekat\exit festival\nastup.hpp
+1589660586 d:\filip\Škola\git projekat\projekat\exit festival\nastup.hpp
 	"Stage.hpp"
+	"TerminNastupa.hpp"
 
-1588086018 d:\filip\Škola\git projekat\projekat\exit festival\terminnastupa.hpp
+1589660565 d:\filip\Škola\git projekat\projekat\exit festival\terminnastupa.hpp
 

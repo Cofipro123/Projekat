@@ -1,17 +1,17 @@
 #ifndef POSETILAC_HPP_INCLUDED
 #define POSETILAC_HPP_INCLUDED
 #include "Osoba.hpp"
+#include "Zanr.hpp"
 enum vrstaUlaznice{JEDNODNEVNA, NARUKVICA, VIP, VIPGOLD};
 class Posetilac:public Osoba{
 protected:
-    string favZanr;
+    Zanr z;
     vrstaUlaznice u;
     int pare;
     static int brPosetilaca;
 public:
-    Posetilac(string f, vrstaUlaznice uu, int p, string i, string prz, int g, int brh):Osoba(i,prz,g,brh)
+    Posetilac(string f, vrstaUlaznice uu, int p, string i, string prz, int g, int brh, string zi, string o, string si, bool pr):Osoba(i,prz,g,brh),z(zi,o,si,pr)
     {
-        favZanr=f;
         u=uu;
         pare=p;
         brPosetilaca++;
@@ -24,7 +24,7 @@ public:
         cout<<"Vase trenutno stanje na racunu je: "<<pare<<endl;
         cout<<"1. Pljeskavica-300 dinara"<<endl<<"2. Hot dog-250 dinara"<<endl<<"3. Pizza-200 dinara"<<endl<<"4. Smirnoff ice-300 dinara"<<endl;
         cin>> x;
-        if(x=1)
+        if(x==1)
         {
             if(pare>=300){
                 cout<<"Uzivajte u vasoj pljeskavici!"<<endl;
@@ -35,7 +35,7 @@ public:
                 return false;
             }
         }
-        else if(x=2)
+        else if(x==2)
         {
             if(pare>=250){
                 cout<<"Uzivajte u vasem hot dogu!"<<endl;
@@ -46,7 +46,7 @@ public:
                 return false;
             }
         }
-        else if(x=3)
+        else if(x==3)
         {
             if(pare>=200){
                 cout<<"Uzivajte u vasoj pizzi!"<<endl;
@@ -57,7 +57,7 @@ public:
                 return false;
             }
         }
-        else if(x=4)
+        else if(x==4)
         {
             if(pare>=300){
                 cout<<"Uzivajte u vasem Smirnoff ice-u!"<<endl;
@@ -69,42 +69,10 @@ public:
             }
         }
     };
-    string getFavZanr(){return favZanr;}
-   /* void unos (Izvodjac iz[], Stage s[])
+    void plan ()
     {
-        string ime;
-        string prezime;
-        int uzrast;
-        int brh;
-        string fz;
-        vrstaUlaznice vu;
-        int p;
-
-        cin>>i;
-        cin>>prz;
-        cin>>uz;
-        cin>>brh;
-        cin>>fz;
-        cin>>vu;
-        cin>>p;
-        Posetilac(fz,vu,pi,prz,uz,brh);
-        for(i=0;i<3;i++)
-        {
-            if(s[i].z.getZanr() == fz)
-            {
-                cout<<"Exit team bi vam preporucio "<< s.ime<< " stage";
-            }
-        }
-        for(i=0;i<3;i++)
-        {
-            if(iz[i].z.getZanr() == fz)
-            {
-                cout<<" i " i.ime <<" izvodjaca"<<endl;
-            }
-        }
-
-    }*/
-
+        cout<< "Vas omiljeni zanr je: "<<z.getZanr()<< " Stoga Vam preporucujemo "<<z.getStejdz().getIme()<<endl;
+    }
 };
 
 
