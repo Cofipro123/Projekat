@@ -16,6 +16,7 @@ public:
     {
         imeIzv=u;
     }
+    TerminNastupa getTermin(){return t;}
     friend ostream& operator<<(ostream& izlaz, const Nastup &n){
 
         izlaz<<"Nastup - ispis"<<endl;
@@ -24,7 +25,7 @@ public:
 
         return izlaz;
     }
-    TerminNastupa getTermin(){return t;}
+
     string getImeIzv(){return imeIzv;}
     Zanr getZ(){return z;}
 };

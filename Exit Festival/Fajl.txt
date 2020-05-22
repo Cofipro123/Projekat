@@ -3,5 +3,5 @@ Ime: Filip
 Prezime: Vidakovic
 Godine: 16
 Broj hromozoma: 46
-Pare: 400
+Pare: 300
 

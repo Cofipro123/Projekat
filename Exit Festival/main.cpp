@@ -173,113 +173,148 @@ int main()
     f[2].setDan(2);
     f[3].setDan(3);
     f[4].setDan(4);
-    cout<< "Ako ste posetilac, pritisnite 1,"<<endl<< "ako ste zaposleni, pritisnite 2,"<<endl<< "ako ste organizator pritisnite 3."<<endl<< "Pritisnite 0 da izadjete iz aplikacije"<<endl;
     int l;
-    cin>>l;
+
     Posetilac p1;
     Zaposleni r1;
     Organizator o1;
-    Nastup n1("Travis Scott",3,0,"Rap","Fusion",false);
-    if(l == 1)
+    int kkk;
+    int c;
+    int h=0;
+    while(h<1)
+    {
+        h++;
+        cout<< "Ako ste posetilac, pritisnite 1,"<<endl<< "ako ste zaposleni, pritisnite 2,"<<endl<< "ako ste organizator pritisnite 3."<<endl<< "Pritisnite 0 da izadjete iz aplikacije"<<endl;
+        cin>>l;
+        if(l == 1)
 
-    {
         {
-        Posetilac p1;
-        int c;
-        p1=PosetilacPrijava(p1);
-        cout<< "Uspesna prijava"<<endl;
-        ofstream Fajl;
-        Fajl.open("Fajl.txt");
-        Fajl<< p1<<endl;
-        Fajl.close();
-        for(auto i = zanrovi.begin(); i != zanrovi.end(); i++)
-        {
-            if((*i)->getZanr() == p1.getZ().getZanr())
             {
-                p1.getZ().getStejdz().setIme((*i)->getStejdz().getIme());
-                break;
-            }
-        }
-        if(p1.getZ().getStejdz().getIme() == "Main stage")
-        {
-            p1.getZ().getStejdz().setPr(true);
-        }
-        else
-        {
-            p1.getZ().getStejdz().setPr(false);
-        }
-        while(i<=4)
-        {
-            cout<<"U toku je "<<f[i].getDan()<<". dan"<<endl;
-            if(p1.getVrsta() == JEDNODNEVNA && i>=2)
-            {
-                cout<< "Ili kupi kartu na mostu ili idi kuci"<<endl;
-            }
-            cout<< "Ako zelite da narucite hranu, kliknite 1. Ako necete Kliknite 0"<<endl;
-            cin>>c;
-            if(c == 1)
-            {
-                p1.kupi();
-            }
-            int kkk;
-            for(kkk=0;kkk<4;kkk++)
-            {
-                f[kkk].uporedi(p1);
-            }
-            i++;
-            }
-}
-    }
+                Posetilac p1;
 
-    else if(l == 2)
-    {
-        r1=ZaposleniPrijava(r1);
-        cout<< "Uspesna prijava"<<endl;
-        r1.plan();
-    }
-    else if(l == 3)
-    {
-        o1=OrganizatorPrijava(o1);
-        cout<< "Uspesna prijava"<<endl;
-        cout<< "Ukucajte 1 da dodate nastup. Kada dodate sve nastupe za odgovarajuci dan kliknite 0"<<endl;
-        int q;
-        cin>>q;
-        string u;
-        int s;
-        int m;
-        string z;
-        string i;
-        bool p;
-        int w=1;
-        int br=0;
-        while(w<=4){
-            cout<<"Ime izvodjaca: ";cin>> u;cout<<endl;
-            cout<<"Sat: ";cin>> s;cout<<endl;
-            cout<<"Minut: ";cin>> m;cout<<endl;
-            cout<<"Zanr: ";cin>> z;cout<<endl;
-            cout<<"Stage: ";cin>> i;cout<<endl;
-            cout<<"Oljin omiljeni stage: ";cin>> p;cout<< "Uneli ste p"<<endl;
+                p1=PosetilacPrijava(p1);
+                cout<< "Uspesna prijava"<<endl;
+                ofstream Fajl;
+                Fajl.open("Fajl.txt");
+                Fajl<< p1<<endl;
+                Fajl.close();
+                for(auto i = zanrovi.begin(); i != zanrovi.end(); i++)
+                {
+                    if((*i)->getZanr() == p1.getZ().getZanr())
+                    {
+                        p1.getZ().getStejdz().setIme((*i)->getStejdz().getIme());
+                        break;
+                    }
+                }
+                if(p1.getZ().getStejdz().getIme() == "Main stage")
+                {
+                    p1.getZ().getStejdz().setPr(true);
+                }
+                else
+                {
+                    p1.getZ().getStejdz().setPr(false);
+                }
+                while(i<=4)
+                {
+                    cout<<"U toku je "<<f[i].getDan()<<". dan"<<endl;
+                    if(p1.getVrsta() == JEDNODNEVNA && i>=2)
+                    {
+                        cout<< "Ili kupi kartu na mostu ili idi kuci"<<endl;
+                    }
+                    cout<< "Ako zelite da narucite hranu, kliknite 1. Ako necete Kliknite 0"<<endl;
+                    cin>>c;
+                    if(c == 1)
+                    {
+                        p1.kupi();
+                    }
+
+                    for(kkk=0; kkk<4; kkk++)
+                    {
+                        f[kkk].uporedi(p1);
+                    }
+                    i++;
+                }
+            }
+
+
+        }
+
+        else if(l == 2)
+        {
+            r1=ZaposleniPrijava(r1);
+            cout<< "Uspesna prijava"<<endl;
+            r1.plan();
+            h--;
+        }
+        else if(l == 3)
+        {
+            h--;
+            o1=OrganizatorPrijava(o1);
+            cout<< "Uspesna prijava"<<endl;
+            cout<< "Ukucajte 1 da dodate nastup. Kada dodate sve nastupe za odgovarajuci dan kliknite 0"<<endl;
+            int q;
             cin>>q;
-            fflush;
-            cout<<"Uneli ste q";
-            Nastup *a=new Nastup(u,s,m,z,i,p);
-            f[br].dodajVector(*a);
-            br++;
-            cout<<br;
-
-            if(q == 0)
+            string u;
+            int s;
+            int m;
+            string z;
+            string i;
+            bool p;
+            int w=1;
+            int br=0;
+            while(w<=4)
             {
-                w++;
+                cout<<"Ime izvodjaca: ";
+                cin>> u;
+                cout<<endl;
+
+                cout<<"Sat: ";
+                cin>> s;
+                cout<<endl;
+
+                cout<<"Minut: ";
+                cin>> m;
+                cout<<endl;
+
+                cout<<"Zanr: ";
+                cin>> z;
+                cout<<endl;
+
+                cout<<"Stage: ";
+                cin>> i;
+                cout<<endl;
+
+                cout<<"Oljin omiljeni stage: ";
+                cin>> p;
+                cout<< "Uneli ste p"<<endl;
+
+                cin>>q;
+                fflush(stdout);
+                cout<<"Uneli ste q"<<endl;
+
+                Nastup *a=new Nastup(u,s,m,z,i,p);
+                f[br].dodajVector(*a);
+                br++;
+                cout<<w<<endl;
+
+                if(q == 0)
+                {
+                    w++;
+                }
+
             }
+            for(kkk=0; kkk<4; kkk++)
+                    {
+                        f[kkk].ispis();
+                    }
             cout<< "Uneli ste sve nastupe, prepustam aplikaciju korisniku"<<endl;
+
+
         }
-
-
-
-    }
-    if(l==0)
-    {
-        return 0;
+        if(l==0)
+        {
+            return 0;
+        }
     }
 
 
