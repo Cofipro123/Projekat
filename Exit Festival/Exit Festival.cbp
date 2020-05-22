@@ -35,6 +35,7 @@
 		<Unit filename="Exit.hpp">
 			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
+		<Unit filename="Fajl.txt" />
 		<Unit filename="FestivalskiDan.hpp">
 			<Option target="&lt;{~None~}&gt;" />
 		</Unit>

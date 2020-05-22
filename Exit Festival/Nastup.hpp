@@ -6,16 +6,27 @@ class Nastup{
 protected:
     string imeIzv;
     TerminNastupa t;
+    Zanr z;
 public:
-    Nastup():t()
+    Nastup():t(),z()
     {
         imeIzv="d";
     }
-    Nastup(string u, int s, int m):t(s,m)
+    Nastup(string u, int s, int m, string z, string i, bool p):t(s,m),z(z,i,p)
     {
         imeIzv=u;
     }
+    friend ostream& operator<<(ostream& izlaz, const Nastup &n){
+
+        izlaz<<"Nastup - ispis"<<endl;
+
+        izlaz<<"Ime izvodjaca: "<<n.imeIzv<<endl;
+
+        return izlaz;
+    }
     TerminNastupa getTermin(){return t;}
+    string getImeIzv(){return imeIzv;}
+    Zanr getZ(){return z;}
 };
 
 

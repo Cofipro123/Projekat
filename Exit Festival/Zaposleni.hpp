@@ -2,13 +2,12 @@
 #define ZAPOSLENI_HPP_INCLUDED
 #include "Osoba.hpp"
 #include <vector>
-enum tipPosla{PANDUR, OBEZBEDJENJE, MEDTEHNICAR, VOLONTER, STANDZAHRANU};
+enum tipPosla{PANDUR, OBEZBEDJENJE, MEDTEHNICAR, VOLONTER, STANDZAHRANU,ORGANIZATOR};
 class Zaposleni:public Osoba{
 protected:
     tipPosla t;
     double plata;
     int radniDani;
-    vector <Osoba*> osobe;
 public:
     Zaposleni(tipPosla tt, double pl, int r, string i, string p, int u, int brh):Osoba(i,p,u,brh)
     {
@@ -16,50 +15,46 @@ public:
         plata=pl;
         radniDani=r;
     }
-
-    void dodajVector(Osoba &o)
+    Zaposleni():Osoba()
     {
-        osobe.push_back(&o);
-        cout<< "Dodat element u madafakin vector"<<endl;
+        t=PANDUR;
+        plata=0;
+        radniDani=4;
     }
-    void brisVector ()
+    void setCelo(double pl, int r, string i, string p, int u, int brh)
     {
-        string lajna;
-        cin>>lajna;
-        bool izbrisan=false;
-        for(auto i = osobe.begin(); i != osobe.end(); i++)
+        plata=pl;
+        radniDani=r;
+        ime=i;
+        prezime=p;
+        uzrast=u;
+        brojHromozoma=brh;
+    }
+    void setTip (int x)
+    {
+        if(x == 1)
         {
-            if((*i)->getIme()==lajna)
-            {
-                osobe.erase(i);
-                izbrisan=true;
-                break;
-            }
+            t=PANDUR;
         }
-        if(izbrisan)
-        cout<<"Izbrisan madafakin vector"<<endl;
-    }
-    void ispis()
-    {
-       for(auto i = osobe.begin(); i != osobe.end(); i++)
+        else if(x == 2)
         {
-            cout<<**i<<endl;
+            t=OBEZBEDJENJE;
         }
-    }
-    void pretraga ()
-    {
-        string lajna;
-        cin>>lajna;
-        for(auto i = osobe.begin(); i != osobe.end(); i++)
+        else if(x == 3)
         {
-            if((*i)->getIme()==lajna)
-            {
-                cout<<**i<<endl;
-            }
-            else
-            {
-                cout<< "Dambo";
-            }
+            t=MEDTEHNICAR;
+        }
+        else if(x == 4)
+        {
+            t=VOLONTER;
+        }
+        else if(x == 5)
+        {
+            t=STANDZAHRANU;
+        }
+        else
+        {
+            t=ORGANIZATOR;
         }
     }
     void plan()

@@ -28,6 +28,9 @@ public:
         return izlaz;
     }
     string getIme(){return ime;}
+    void setIme(string i){ime=i;}
+    void setPr(bool p){profesorkinOmiljeniStejdz=p;}
+
 };
 
 

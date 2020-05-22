@@ -10,6 +10,16 @@ public:
         sat=21;
         minut=0;
     }
+    friend ostream& operator<<(ostream& izlaz, const TerminNastupa &t){
+
+        izlaz<<"Vreme nastupa - ispis"<<endl;
+
+        izlaz<<"Sati: "<<t.sat<<endl;
+
+        izlaz<<"Minuta:"<<t.minut<<endl;
+
+        return izlaz;
+    }
     TerminNastupa(int s, int m)
     {
         sat=s;
