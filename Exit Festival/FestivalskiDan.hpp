@@ -2,7 +2,8 @@
 #define FESTIVALSKIDAN_HPP_INCLUDED
 #include "Nastup.hpp"
 #include <vector>
-class FestivalskiDan{
+class FestivalskiDan
+{
 protected:
     int dan;
     vector<Nastup*> nastupi;
@@ -16,9 +17,16 @@ public:
         dan=1;
     }
 
-    void setDan (int x){dan=x;}
-    int getDan (){return dan;}
-    friend ostream& operator<<(ostream& izlaz, const FestivalskiDan &f){
+    void setDan (int x)
+    {
+        dan=x;
+    }
+    int getDan ()
+    {
+        return dan;
+    }
+    friend ostream& operator<<(ostream& izlaz, const FestivalskiDan &f)
+    {
 
         izlaz<<"Ispis"<<endl;
 
@@ -29,7 +37,7 @@ public:
     void dodajVector(Nastup &n)
     {
         nastupi.push_back(&n);
-        cout<< "Dodat element u vector"<<endl;
+        ///cout<< "Dodat element u vector"<<endl;
     }
     void brisVector ()
     {
@@ -46,11 +54,11 @@ public:
             }
         }
         if(izbrisan)
-        cout<<"Izbrisan vector"<<endl;
+            cout<<"Izbrisan vector"<<endl;
     }
     void ispis()
     {
-       for(auto i = nastupi.begin(); i != nastupi.end(); i++)
+        for(auto i = nastupi.begin(); i != nastupi.end(); i++)
         {
             cout<<**i<<endl;
         }
@@ -73,7 +81,7 @@ public:
     }
     void uporedi (Posetilac &p)
     {
-        for(auto i=nastupi.begin(); i != nastupi.end();i++)
+        for(auto i=nastupi.begin(); i != nastupi.end(); i++)
         {
             if(p.getZ().getZanr() == (*i)->getZ().getZanr())
             {

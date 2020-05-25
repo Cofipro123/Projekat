@@ -1,7 +1,7 @@
 Posetilac - ispis
-Ime: Filip
-Prezime: Vidakovic
-Godine: 16
-Broj hromozoma: 46
-Pare: 300
+Ime: g
+Prezime: s
+Godine: 1
+Broj hromozoma: 1
+Pare: 850
 

@@ -1,7 +1,8 @@
 #ifndef ZANR_HPP_INCLUDED
 #define ZANR_HPP_INCLUDED
 #include "Stage.hpp"
-class Zanr{
+class Zanr
+{
 protected:
     string zanr;
     Stage s;
@@ -15,17 +16,28 @@ public:
         zanr=z;
 
     }
-    void setZanr(string z){zanr=z;}
-    string getZanr(){return zanr;}
-    friend ostream& operator<<(ostream& izlaz, const Zanr &z){
+    void setZanr(string z)
+    {
+        zanr=z;
+    }
+    string getZanr()
+    {
+        return zanr;
+    }
+    friend ostream& operator<<(ostream& izlaz, const Zanr &z)
+    {
 
-        izlaz<<"Zanr - ispis"<<endl;
 
         izlaz<<"Naziv Zanra: "<<z.zanr<<endl;
 
+        izlaz<<"Stage: "<<z.s<<endl;
+
         return izlaz;
     }
-    Stage getStejdz(){return s;}
+    Stage getStejdz()
+    {
+        return s;
+    }
 };
 
 

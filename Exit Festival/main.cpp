@@ -144,11 +144,11 @@ int main()
 {
     string nasFajl = "Funkcionalnost.txt";
 
-    cout<<"\tU fajlu pise: "<<endl;
-    citajTxt();
+    //cout<<"\tU fajlu pise: "<<endl;
+    //citajTxt();
     cout<<endl<<endl;
     string recenica="Ovo je poslednji red fajla...";
-    cout<<"\tU fajlu posle dodavanja pise: "<<endl;
+    //cout<<"\tU fajlu posle dodavanja pise: "<<endl;
     Exit e2020(2020,"2.0");
     int i=1;
     vector <Zanr*> zanrovi;
@@ -163,10 +163,14 @@ int main()
     zanrovi.push_back(&z4);
     Zanr z5("Folk","Serbian stage", false);
     zanrovi.push_back(&z5);
+    Zanr z6("Rock","Explosive stage", false);
+    zanrovi.push_back(&z6);
+    Zanr fejk("Fejk","Nesto",false);
+    zanrovi.push_back(&fejk);
 
 
 
-    cout<< "Dobro dosli na exit "<< e2020.getKampanja()<<e2020.getGodina()<< ". godine"<<endl;
+    cout<< "Dobro dosli na exit "<< e2020.getKampanja()<< " " <<e2020.getGodina()<< ". godine"<<endl;
 
     FestivalskiDan f[4];
     f[1].setDan(1);
@@ -189,20 +193,19 @@ int main()
         if(l == 1)
 
         {
-            {
-                Posetilac p1;
+
+
 
                 p1=PosetilacPrijava(p1);
                 cout<< "Uspesna prijava"<<endl;
-                ofstream Fajl;
-                Fajl.open("Fajl.txt");
-                Fajl<< p1<<endl;
-                Fajl.close();
+
                 for(auto i = zanrovi.begin(); i != zanrovi.end(); i++)
                 {
+                    ///cout<< (*i)->getZanr()<<endl;
                     if((*i)->getZanr() == p1.getZ().getZanr())
                     {
                         p1.getZ().getStejdz().setIme((*i)->getStejdz().getIme());
+                        ///cout<< (*i)->getStejdz()<<endl;
                         break;
                     }
                 }
@@ -228,18 +231,22 @@ int main()
                         p1.kupi();
                     }
 
-                    for(kkk=0; kkk<4; kkk++)
-                    {
-                        f[kkk].uporedi(p1);
-                    }
+                    cout<< p1.getZ().getZanr()<< " izvodjaci danas su "<<endl;
+                    f[i-1].uporedi(p1);
+
                     i++;
                 }
-            }
+
+                ofstream Fajl;
+                Fajl.open("Fajl.txt");
+                Fajl<< p1<<endl;
+                Fajl.close();
+
 
 
         }
 
-        else if(l == 2)
+        if(l == 2)
         {
             r1=ZaposleniPrijava(r1);
             cout<< "Uspesna prijava"<<endl;
@@ -260,10 +267,11 @@ int main()
             string z;
             string i;
             bool p;
-            int w=1;
-            int br=0;
-            while(w<=4)
+            int w=0;
+            while(w<4)
             {
+                cout<<w + 1<< ". dan" <<endl;
+
                 cout<<"Ime izvodjaca: ";
                 cin>> u;
                 cout<<endl;
@@ -282,31 +290,40 @@ int main()
 
                 cout<<"Stage: ";
                 cin>> i;
+                ///cout<< "Uneli ste stage";
                 cout<<endl;
 
-                cout<<"Oljin omiljeni stage: ";
-                cin>> p;
-                cout<< "Uneli ste p"<<endl;
+                if(i == "Main")
+                {
+                    p=true;
+                }
+                else
+                {
+                    p=false;
+                }
 
+                cout<< "Ako hocete da dodate jos jednog izvodjaca za "<< w+1 << ". dan, pritisnite 1, u suprotnom pritisnite 0"<<endl;
                 cin>>q;
                 fflush(stdout);
-                cout<<"Uneli ste q"<<endl;
+                ///cout<<"Uneli ste q"<<endl;
 
                 Nastup *a=new Nastup(u,s,m,z,i,p);
-                f[br].dodajVector(*a);
-                br++;
-                cout<<w<<endl;
+                f[w].dodajVector(*a);
+
+
 
                 if(q == 0)
                 {
                     w++;
+                    cout<<endl;
                 }
+
 
             }
             for(kkk=0; kkk<4; kkk++)
-                    {
-                        f[kkk].ispis();
-                    }
+            {
+                f[kkk].ispis();
+            }
             cout<< "Uneli ste sve nastupe, prepustam aplikaciju korisniku"<<endl;
 
 
@@ -315,9 +332,12 @@ int main()
         {
             return 0;
         }
+
     }
 
+        cout<< "Pokupite svojih "<< p1.getPare()<< " dinara sa kartice"<<endl<<endl;
 
+        cout<< "Hvala vam sto ste bili deo exit "<<e2020.getKampanja()<< ". Vidimo se "<<e2020.getGodina()+1<< ". godine"<<endl;
 
 
 

@@ -1,7 +1,8 @@
 #ifndef EXIT_HPP_INCLUDED
 #define EXIT_HPP_INCLUDED
 #include <vector>
-class Exit{
+class Exit
+{
 protected:
     int godina;
     string kampanja;
@@ -12,8 +13,14 @@ public:
         godina=g;
         kampanja=k;
     }
-    int getGodina(){return godina;}
-    string getKampanja(){return kampanja;}
+    int getGodina()
+    {
+        return godina;
+    }
+    string getKampanja()
+    {
+        return kampanja;
+    }
     void dodajVector(Posetilac &p)
     {
         posetioci.push_back(&p);
@@ -34,11 +41,11 @@ public:
             }
         }
         if(izbrisan)
-        cout<<"Izbrisan vector"<<endl;
+            cout<<"Izbrisan vector"<<endl;
     }
     void ispis()
     {
-       for(auto i = posetioci.begin(); i != posetioci.end(); i++)
+        for(auto i = posetioci.begin(); i != posetioci.end(); i++)
         {
             cout<<**i<<endl;
         }

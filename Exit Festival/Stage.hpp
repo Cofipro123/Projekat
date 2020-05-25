@@ -1,7 +1,8 @@
 #ifndef STAGE_HPP_INCLUDED
 #define STAGE_HPP_INCLUDED
 #include "Zanr.hpp"
-class Stage{
+class Stage
+{
 protected:
     string ime;
     bool profesorkinOmiljeniStejdz;
@@ -17,19 +18,28 @@ public:
         ime="Main";
         profesorkinOmiljeniStejdz=true;
     }
-    friend ostream& operator<<(ostream& izlaz, const Stage &s){
+    friend ostream& operator<<(ostream& izlaz, const Stage &s)
+    {
 
-        izlaz<<"Stage - ispis"<<endl;
 
-        izlaz<<"Naziv Stagea: "<<s.ime<<endl;
+        izlaz<<s.ime<<endl;
 
         izlaz<<"Profesorkin omiljeni stejdz:"<<s.profesorkinOmiljeniStejdz<<endl;
 
         return izlaz;
     }
-    string getIme(){return ime;}
-    void setIme(string i){ime=i;}
-    void setPr(bool p){profesorkinOmiljeniStejdz=p;}
+    string getIme()
+    {
+        return ime;
+    }
+    void setIme(string i)
+    {
+        ime=i;
+    }
+    void setPr(bool p)
+    {
+        profesorkinOmiljeniStejdz=p;
+    }
 
 };
 

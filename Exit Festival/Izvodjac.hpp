@@ -3,25 +3,27 @@
 #include "Osoba.hpp"
 #include "Zanr.hpp"
 #include "Nastup.hpp"
-class Izvodjac:public Osoba{
+class Izvodjac:public Osoba
+{
 protected:
     bool domaci;
     double plata;
     Nastup n;
 public:
     Izvodjac():Osoba(),n()
-     {
-         domaci=false;
-         plata=0;
-         plan();
-     }
+    {
+        domaci=false;
+        plata=0;
+        plan();
+    }
     //Napraviti construktor bez parametri
     Izvodjac(bool d, double pl, string im, string p, int u, int brh, string imeIz, int s, int m, string z, string si, bool p1):Osoba(im,p,u,brh),n(imeIz,s,m,z,si,p1)
     {
         domaci=d;
         plata=pl;
     }
-    friend ostream& operator<<(ostream& izlaz, const Izvodjac &i){
+    friend ostream& operator<<(ostream& izlaz, const Izvodjac &i)
+    {
 
         izlaz<<"Izvodjac - ispis"<<endl;
 
@@ -40,7 +42,10 @@ public:
         izlaz<<"Nastup: "<<i.n<<endl;
         return izlaz;
     }
-    Nastup getNastup(){return n;}
+    Nastup getNastup()
+    {
+        return n;
+    }
     void plan ()
     {
 

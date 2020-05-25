@@ -3,8 +3,9 @@
 #include "Osoba.hpp"
 #include "Zanr.hpp"
 
-enum vrstaUlaznice{JEDNODNEVNA, NARUKVICA, VIP, VIPGOLD};
-class Posetilac:public Osoba{
+enum vrstaUlaznice {JEDNODNEVNA, NARUKVICA, VIP, VIPGOLD};
+class Posetilac:public Osoba
+{
 protected:
     Zanr z;
     vrstaUlaznice u;
@@ -16,7 +17,6 @@ public:
         u=uu;
         pare=p;
         brPosetilaca++;
-        cout<<"Ima "<<brPosetilaca<<" posetilaca"<<endl;
     }
     Posetilac():Osoba()
     {
@@ -33,7 +33,10 @@ public:
         brojHromozoma=brh;
         z.setZanr(zi);
     }
-    vrstaUlaznice getVrsta(){return u;}
+    vrstaUlaznice getVrsta()
+    {
+        return u;
+    }
     void setVrsta(int x)
     {
         if(x == 1)
@@ -48,15 +51,20 @@ public:
         {
             u=VIP;
         }
-        else{
+        else
+        {
             u=VIPGOLD;
         }
     }
 
 
-    Zanr getZ(){return z;}
+    Zanr getZ()
+    {
+        return z;
+    }
 
-    friend ostream& operator<<(ostream& izlaz, const Posetilac &p){
+    friend ostream& operator<<(ostream& izlaz, const Posetilac &p)
+    {
 
         izlaz<<"Posetilac - ispis"<<endl;
 
@@ -88,11 +96,13 @@ public:
         cin>> x;
         if(x==1)
         {
-            if(pare>=300){
+            if(pare>=300)
+            {
                 cout<<"Uzivajte u vasoj pljeskavici!"<<endl;
                 pare-=300;
             }
-            else{
+            else
+            {
                 cout<< "Molim vas uplatite jos para. To mozete uraditi pritiskom tastera 1. Ako ipak necete, pritisnite 0"<<endl;
                 cin>>y;
 
@@ -107,11 +117,13 @@ public:
         }
         else if(x==2)
         {
-            if(pare>=250){
+            if(pare>=250)
+            {
                 cout<<"Uzivajte u vasem hot dogu!"<<endl;
                 pare-=250;
             }
-            else{
+            else
+            {
                 cout<< "Molim vas uplatite jos para. To mozete uraditi pritiskom tastera 1. Ako ipak necete, pritisnite 0"<<endl;
                 cin>>y;
 
@@ -126,11 +138,13 @@ public:
         }
         else if(x==3)
         {
-            if(pare>=200){
+            if(pare>=200)
+            {
                 cout<<"Uzivajte u vasoj pizzi!"<<endl;
                 pare-=200;
             }
-            else{
+            else
+            {
                 cout<< "Molim vas uplatite jos para. To mozete uraditi pritiskom tastera 1. Ako ipak necete, pritisnite 0"<<endl;
                 cin>>y;
 
@@ -145,11 +159,13 @@ public:
         }
         else if(x==4)
         {
-            if(pare>=300){
+            if(pare>=300)
+            {
                 cout<<"Uzivajte u vasem Smirnoff ice-u!"<<endl;
                 pare-=300;
             }
-            else{
+            else
+            {
                 cout<< "Molim vas uplatite jos para. To mozete uraditi pritiskom tastera 1. Ako ipak necete, pritisnite 0"<<endl;
                 cin>>y;
 
@@ -161,8 +177,10 @@ public:
                 }
                 kupi();
             }
+            cout<< "Otalo vam je "<<pare<< " novca"<<endl;
         }
     };
+    int getPare(){return pare;}
     void plan ()
     {
         cout<< "Vas omiljeni zanr je: "<<z.getZanr()<< " Stoga Vam preporucujemo "<<z.getStejdz().getIme()<<endl;

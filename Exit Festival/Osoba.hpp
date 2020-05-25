@@ -1,6 +1,7 @@
 #ifndef OSOBA_HPP_INCLUDED
 #define OSOBA_HPP_INCLUDED
-class Osoba{
+class Osoba
+{
 protected:
     string ime;
     string prezime;
@@ -21,7 +22,8 @@ public:
         uzrast=u;
         brojHromozoma=brh;
     }
-    friend ostream& operator<<(ostream& izlaz, const Osoba& o){
+    friend ostream& operator<<(ostream& izlaz, const Osoba& o)
+    {
 
         izlaz<<"Osoba - ispis"<<endl;
 
@@ -39,7 +41,10 @@ public:
     {
         cout<< "Dobar dan "<< ime<< ", Vas plan je:";
     }
-    string getIme(){return ime;}
+    string getIme()
+    {
+        return ime;
+    }
 };
 
 

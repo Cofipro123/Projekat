@@ -2,7 +2,8 @@
 #define NASTUP_HPP_INCLUDED
 #include "Stage.hpp"
 #include "TerminNastupa.hpp"
-class Nastup{
+class Nastup
+{
 protected:
     string imeIzv;
     TerminNastupa t;
@@ -16,18 +17,29 @@ public:
     {
         imeIzv=u;
     }
-    TerminNastupa getTermin(){return t;}
-    friend ostream& operator<<(ostream& izlaz, const Nastup &n){
-
-        izlaz<<"Nastup - ispis"<<endl;
+    TerminNastupa getTermin()
+    {
+        return t;
+    }
+    friend ostream& operator<<(ostream& izlaz, const Nastup &n)
+    {
 
         izlaz<<"Ime izvodjaca: "<<n.imeIzv<<endl;
 
+        izlaz<<n.t;
+
+        izlaz<<n.z<<endl;
         return izlaz;
     }
 
-    string getImeIzv(){return imeIzv;}
-    Zanr getZ(){return z;}
+    string getImeIzv()
+    {
+        return imeIzv;
+    }
+    Zanr getZ()
+    {
+        return z;
+    }
 };
 
 

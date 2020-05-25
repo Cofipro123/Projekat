@@ -2,8 +2,9 @@
 #define ZAPOSLENI_HPP_INCLUDED
 #include "Osoba.hpp"
 #include <vector>
-enum tipPosla{PANDUR, OBEZBEDJENJE, MEDTEHNICAR, VOLONTER, STANDZAHRANU,ORGANIZATOR};
-class Zaposleni:public Osoba{
+enum tipPosla {PANDUR, OBEZBEDJENJE, MEDTEHNICAR, VOLONTER, STANDZAHRANU,ORGANIZATOR};
+class Zaposleni:public Osoba
+{
 protected:
     tipPosla t;
     double plata;

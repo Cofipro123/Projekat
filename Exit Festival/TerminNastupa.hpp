@@ -1,6 +1,7 @@
 #ifndef TERMINNASTUPA_HPP_INCLUDED
 #define TERMINNASTUPA_HPP_INCLUDED
-class TerminNastupa{
+class TerminNastupa
+{
 protected:
     int sat;
     int minut;
@@ -10,13 +11,40 @@ public:
         sat=21;
         minut=0;
     }
-    friend ostream& operator<<(ostream& izlaz, const TerminNastupa &t){
+    friend ostream& operator<<(ostream& izlaz, const TerminNastupa &t)
+    {
 
-        izlaz<<"Vreme nastupa - ispis"<<endl;
+        izlaz<<"Nastup se odrzava u ";
 
-        izlaz<<"Sati: "<<t.sat<<endl;
 
-        izlaz<<"Minuta:"<<t.minut<<endl;
+        izlaz<<t.sat;
+
+        if(t.sat%10 == 1)
+        {
+            izlaz<<" sat i ";
+        }
+        else if(t.sat%10 == 2 || t.sat%10 == 3 || t.sat%10 == 4)
+        {
+            izlaz<<" sata i ";
+        }
+        else
+        {
+            izlaz<<" sati i ";
+        }
+
+        if(t.minut%10 == 1)
+        {
+            izlaz<< t.minut <<" minut"<<endl;
+        }
+        else if(t.minut%10 == 2 || t.minut%10 == 3 || t.minut%10 == 4)
+        {
+            izlaz<< t.minut <<" minuta"<<endl;
+        }
+        else
+        {
+            izlaz<< t.minut <<" minuta"<<endl;
+        }
+
 
         return izlaz;
     }
@@ -25,8 +53,14 @@ public:
         sat=s;
         minut=m;
     }
-    int getSat(){return sat;}
-    int getMin(){return minut;}
+    int getSat()
+    {
+        return sat;
+    }
+    int getMin()
+    {
+        return minut;
+    }
 };
 
 
