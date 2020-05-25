@@ -146,7 +146,7 @@ int main()
 
     //cout<<"\tU fajlu pise: "<<endl;
     //citajTxt();
-    cout<<endl<<endl;
+
     string recenica="Ovo je poslednji red fajla...";
     //cout<<"\tU fajlu posle dodavanja pise: "<<endl;
     Exit e2020(2020,"2.0");
@@ -171,7 +171,7 @@ int main()
 
 
     cout<< "Dobro dosli na exit "<< e2020.getKampanja()<< " " <<e2020.getGodina()<< ". godine"<<endl;
-
+    cout<< "------------------------------------"<<endl<<endl;
     FestivalskiDan f[4];
     f[1].setDan(1);
     f[2].setDan(2);
@@ -188,7 +188,7 @@ int main()
     while(h<1)
     {
         h++;
-        cout<< "Ako ste posetilac, pritisnite 1,"<<endl<< "ako ste zaposleni, pritisnite 2,"<<endl<< "ako ste organizator pritisnite 3."<<endl<< "Pritisnite 0 da izadjete iz aplikacije"<<endl;
+        cout<< "Ako ste posetilac, pritisnite 1,"<<endl<< "Ako ste zaposleni, pritisnite 2,"<<endl<< "Ako ste organizator pritisnite 3."<<endl<< "Pritisnite 0 da izadjete iz aplikacije"<<endl;
         cin>>l;
         if(l == 1)
 

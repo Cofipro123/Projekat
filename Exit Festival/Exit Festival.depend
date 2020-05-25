@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1590429999 source:d:\filip\Škola\git projekat\projekat\exit festival\main.cpp
+1590439384 source:d:\filip\Škola\git projekat\projekat\exit festival\main.cpp
 	<iostream>
 	"Osoba.hpp"
 	"Posetilac.hpp"
